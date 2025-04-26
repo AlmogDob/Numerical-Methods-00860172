@@ -140,10 +140,24 @@ Using central difference we can write the difference equations:
     \nomenclature{$i$}{cell index}
     \nomenclature{$N$}{number of elements}
 \end{equation}
-\begin{equation*}
-    \ddots\\
-    \ddots
-\end{equation*}
+We will use the 'point Jacobi' method:
+\begin{enumerate}
+    \item Set the filed with initial condition (linear interpolation).
+    \item Calculate the temperature at index \emph{i} and time step \emph{n+1} from the previous time step:
+    \begin{equation}
+        \begin{matrix}
+            \begin{array}{c}
+                \Lambda e^{T_i^{\left(n+1\right)}}=\frac{\displaystyle-\frac{T_{i+1}^{\left(n\right)}-2T_i^{\left(n\right)}+T_{i-1}^{\left(n\right)}}{h^2}}{\displaystyle\frac{T_{i+1}^{\left(n\right)}-T_{i-1}^{\left(n\right)}}{2h}-\left(T_v-T_u+\alpha\beta\right)} \\\\
+                \Downarrow \\\\
+                T_i^{\left(n+1\right)}=\displaystyle\ln\left(\frac{1}{\Lambda}\frac{\displaystyle-\frac{T_{i+1}^{\left(n\right)}-2T_i^{\left(n\right)}+T_{i-1}^{\left(n\right)}}{h^2}}{\displaystyle\frac{T_{i+1}^{\left(n\right)}-T_{i-1}^{\left(n\right)}}{2h}-\left(T_v-T_u+\alpha\beta\right)}\right)
+            \end{array} && i=1,2,\cdots,N
+        \end{matrix}
+    \end{equation}
+    \item The solution is considered converged when:
+    \begin{equation}
+        \left|y_i^{n+1}-y_i^n\right|<\varepsilon \hspace{1cm} \forall i\in[1, n]
+    \end{equation}
+\end{enumerate}
 
 \subsection{Shooting Method}
 Let's rewrite Eq.\ref{eq: the ode} as a system of 2 ODE:
@@ -160,12 +174,18 @@ Let's rewrite Eq.\ref{eq: the ode} as a system of 2 ODE:
     \nomenclature{$s$}{temporery variable}
 \end{equation}
 To solve the system of equations using the shooting method, we will guess $s_{(i=0)}^{(n)}$ and solve the system of equations using forward difference. Namely:
-\nomenclature{$\cdot^{(n)}$}{value at time step n}
+\nomenclature{\fbox{$\cdot$}$^{(n)}$}{value at time step n}
 \begin{equation}
-    \left\{\begin{array}{lcl}
-        \displaystyle T_{i+1}^{(n)} & = & s_i^{(n)}\cdot h+T_i^{(n)} \\\\
-        \displaystyle s_{i+1}^{(n)} & = & \left(-\Lambda e^{T_i^{(n)}}s_i^{(n)}-\Lambda e^{T_i^{(n)}}\left(T_v-T_u+\alpha\beta\right)\right)\cdot h+s_i^{(n)}
-    \end{array}\right.
+    \begin{matrix}
+        \left\{\begin{array}{lcl}
+            \displaystyle T_{i+1}^{(n)} & = & s_i^{(n)}\cdot h+T_i^{(n)} \\\\
+            \displaystyle s_{i+1}^{(n)} & = & \left(-\Lambda e^{T_i^{(n)}}s_i^{(n)}-\Lambda e^{T_i^{(n)}}\left(T_v-T_u+\alpha\beta\right)\right)\cdot h+s_i^{(n)}
+        \end{array}\right. & \begin{array}{l}
+            s_{i=0}^n=s_0^n \\\\
+            T_{i=0}^n=\zeta\cdot\left(T_v-T_u+\alpha\beta\right) \\\\
+            i=0,1,\cdots,N
+        \end{array}
+    \end{matrix}
 \end{equation}
 To correct the guess of $s_{(i=0)}^{(n)}$, let's define:
 \begin{equation}

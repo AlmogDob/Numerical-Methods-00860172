@@ -1,8 +1,8 @@
-file: NM_hw1_CA.tex
-	@pdflatex NM_hw1_CA.tex > latex_temp.txt
-	@makeindex NM_hw1_CA.nlo -s nomencl.ist -o NM_hw1_CA.nls > latex_temp.txt
-	@pdflatex NM_hw1_CA.tex > latex_temp.txt
-	@pdflatex NM_hw1_CA.tex > latex_temp.txt
+file: NM_hw1_TQ.tex
+	@pdflatex NM_hw1_TQ.tex > latex_temp.txt
+	@makeindex NM_hw1_TQ.nlo -s nomencl.ist -o NM_hw1_TQ.nls > latex_temp.txt
+	@pdflatex NM_hw1_TQ.tex > latex_temp.txt
+	@pdflatex NM_hw1_TQ.tex > latex_temp.txt
 	@cp -r *.log logs/.
 	@rm *.aux *.ilg *.lof *.nlo *.nls *.out *.toc latex_temp.txt *.log *.fls *.fdb_latexmk *.lol
 

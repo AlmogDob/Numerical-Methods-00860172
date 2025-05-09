@@ -1,0 +1,129 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage{amsmath, amssymb, titling}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black]{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{cancel}
+\usepackage{fancyhdr, lastpage}
+\usepackage{fourier-orns}
+\usepackage{xcolor}
+\usepackage{nomencl}
+\makenomenclature
+\usepackage{etoolbox}
+\usepackage{sidecap}
+\usepackage{adjustbox}
+\usepackage{listings}
+\usepackage{matlab-prettifier}
+\usepackage[T1]{fontenc}
+
+\sidecaptionvpos{figure}{c}
+\setlength{\headheight}{18.2pt}
+\setlength{\nomlabelwidth}{1.5cm}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\renewcommand{\headrule}{\vspace{-5pt}\hrulefill\raisebox{-2.1pt}{\quad\leafleft\decoone\leafright\quad}\hrulefill}
+\newcommand{\parder}[2]{\frac{\partial {#1}}{\partial {#2}}}
+% \renewcommand\nomgroup[1]{%
+%   \item[\bfseries
+%   \ifstrequal{#1}{F}{Far--Away Properties}{%
+%   \ifstrequal{#1}{N}{Dimensionless Numbers}{%
+%   \ifstrequal{#1}{M}{Matrices}{%
+%   \ifstrequal{#1}{D}{Diagonals}{%
+%   \ifstrequal{#1}{V}{Vectors}{%
+%   \ifstrequal{#1}{P}{Dimensionless Average Properties}{}}}}}}
+% ]}
+
+\title{Numerical Methods in Aeronautical Engineering \\ HW1 - Theoretical Questions}
+\author{Almog Dobrescu ID 214254252}
+
+% \pagestyle{fancy}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\pagenumbering{roman}
+% \setcounter{page}{1}
+
+\tableofcontents
+\newpage
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Q2}
+Given: 
+\begin{equation}
+    \begin{matrix}
+        \displaystyle\frac{dy}{dt}=f_{\left(t,y\right)} &&& \displaystyle y_{\left(0\right)}=1
+    \end{matrix}
+\end{equation}
+
+\subsection{A}
+Since the Euler method is based on Taylor series expansion, let's derive the expansion for $y_{i+1}$:
+\begin{equation}
+    y_{i+1}=y_i+\left.\frac{h^1}{1!}\frac{dy}{dt}\right|_i+\left.\frac{h^2}{2!}\frac{d^2y}{dt^2}\right|_i+\left.\frac{h^3}{3!}\frac{d^3y}{dt^3}\right|_i+\cdots
+\end{equation}
+According the Euler method, the local error can be written as:
+\begin{equation}
+    \begin{matrix}
+        \displaystyle y_{i+1}=y_i+\frac{h^1}{1!}f_i+R_i && \colorbox{yellow}{$\displaystyle R_i=\frac{h^2}{2!}\left.\frac{df}{dt}\right|_i\approx\emph{O}\left(h^2\right)$}
+    \end{matrix}
+\end{equation}
+
+\subsection{B}
+Given the function \emph{f}, we can derive \emph{f} and get the supremum of the local error over the hole field:
+\begin{equation}
+    \colorbox{yellow}{$\displaystyle\max_i{R}=\frac{\displaystyle\max_i{h^2}}{2!}\max_i{\left|\frac{df}{dt}\right|}$}
+\end{equation}
+
+\subsection{C}
+Assuming \emph{h} is constant, the supremum of the local error is:
+\begin{equation*}
+    \max_i{R}=\frac{h^2}{2!}\max_i{\left|\frac{df}{dt}\right|}
+\end{equation*}
+Defining the final time as \emph{T}, the number of integration steps is:
+\begin{equation}
+    N=\frac{T}{h}
+\end{equation}
+Hence the supremum of the global error is:
+\begin{equation}
+    R_\text{global}=\sum_{i=1}^{N}\max_i{R}=\sum_{i=1}^{N}\frac{h^2}{2!}\max_i{\left|\frac{df}{dt}\right|}=\frac{T}{h}\frac{h^2}{2!}\max_i{\left|\frac{df}{dt}\right|}=\frac{h}{2!}\max_i{\left|\frac{df}{dt}\right|}\approx\colorbox{yellow}{$\emph{O}\left(h\right)$}
+\end{equation}
+
+\subsection{D}
+If we have the equation of \emph{f}, we can derive and find the maximum value of $\displaystyle\frac{df}{dt}$, in the filed.
+
+\newpage
+\section{Q3}
+Given the ODE:
+\begin{equation}
+    \begin{matrix}
+        \displaystyle\frac{dy}{dx}=-y &&& y_{\left(0\right)}=1
+    \end{matrix}
+\end{equation}
+The analytical solution for the problem is:
+\begin{equation}
+    \begin{array}{rcr}
+        \displaystyle\frac{dy}{y} & = & -dx \\\\
+        \displaystyle\int\frac{dy}{y} & = & \int-dx \\\\
+        \displaystyle\ln\left(y\right) & = & -x \\\\
+    \end{array}
+\end{equation}
+\begin{equation}
+    \colorbox{yellow}{$y=\displaystyle e^{-\displaystyle x}$}
+\end{equation}
+
+\subsection{A - Forward differencing}
+
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  26 APR 2025 22:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  9 MAY 2025 23:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -586,7 +586,7 @@ Package: ragged2e 2021/12/15 v3.1 ragged2e Package
 \RaggedRightParindent=\skip79
 \JustifyingParindent=\skip80
 )
-<./../../../Cover page for computational assignments 2025.png, id=40, 553.31718
+<./../../../Cover page for computational assignments 2025.png, id=76, 553.31718
 pt x 681.29532pt>
 File: ./../../../Cover page for computational assignments 2025.png Graphic file
  (type png)
@@ -618,28 +618,170 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [1] (./hw1.nls) [2]
 LaTeX Font Info:    Trying to load font information for U+futs on input line 15
-5.
+2.
  (/usr/share/texlive/texmf-dist/tex/latex/fourier/ufuts.fd
 File: ufuts.fd 2004/03/02 Fontinst v1.926 font definitions for U/futs.
 )pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.155     \end{equation}
-                         [1] [2] 
+l.152     \end{equation}
+                         [1]
+Overfull \hbox (22.81982pt too wide) detected at line 187
+[][] [] 
+ []
+
+<images/FD - T vs zeta for diff N.png, id=153, 599.1183pt x 366.04755pt>
+File: images/FD - T vs zeta for diff N.png Graphic file (type png)
+<use images/FD - T vs zeta for diff N.png>
+Package pdftex.def Info: images/FD - T vs zeta for diff N.png  used on input li
+ne 208.
+(pdftex.def)             Requested size: 223.07211pt x 136.29004pt.
+<images/FD - n vs N.png, id=154, 590.4459pt x 366.04755pt>
+File: images/FD - n vs N.png Graphic file (type png)
+<use images/FD - n vs N.png>
+Package pdftex.def Info: images/FD - n vs N.png  used on input line 215.
+(pdftex.def)             Requested size: 223.07211pt x 138.2952pt.
+[2]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 224.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\varepsilon' on input line 224.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 224.
+
+<images/FD - T vs zeta for diff epsilon.png, id=175, 613.21095pt x 366.04755pt>
+
+File: images/FD - T vs zeta for diff epsilon.png Graphic file (type png)
+<use images/FD - T vs zeta for diff epsilon.png>
+Package pdftex.def Info: images/FD - T vs zeta for diff epsilon.png  used on in
+put line 229.
+(pdftex.def)             Requested size: 223.07211pt x 133.15662pt.
+<images/FD - n vs epsilon.png, id=176, 592.07198pt x 366.04755pt>
+File: images/FD - n vs epsilon.png Graphic file (type png)
+<use images/FD - n vs epsilon.png>
+Package pdftex.def Info: images/FD - n vs epsilon.png  used on input line 236.
+(pdftex.def)             Requested size: 223.07211pt x 137.91539pt.
+<images/shooting - T vs zeta for diff N.png, id=179, 599.1183pt x 366.04755pt>
+File: images/shooting - T vs zeta for diff N.png Graphic file (type png)
+<use images/shooting - T vs zeta for diff N.png>
+Package pdftex.def Info: images/shooting - T vs zeta for diff N.png  used on in
+put line 251.
+(pdftex.def)             Requested size: 223.07211pt x 136.29004pt.
+<images/shooting - n vs N.png, id=180, 616.82445pt x 366.04755pt>
+File: images/shooting - n vs N.png Graphic file (type png)
+<use images/shooting - n vs N.png>
+Package pdftex.def Info: images/shooting - n vs N.png  used on input line 258.
+(pdftex.def)             Requested size: 223.07211pt x 132.38023pt.
+[3 <./images/FD - T vs zeta for diff N.png (PNG copy)> <./images/FD - n vs N.pn
+g (PNG copy)> <./images/FD - T vs zeta for diff epsilon.png (PNG copy)> <./imag
+es/FD - n vs epsilon.png (PNG copy)>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 267.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\varepsilon' on input line 267.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 267.
+
+<images/shooting - T vs zeta for diff epsilon.png, id=188, 623.14807pt x 366.04
+755pt>
+File: images/shooting - T vs zeta for diff epsilon.png Graphic file (type png)
+<use images/shooting - T vs zeta for diff epsilon.png>
+Package pdftex.def Info: images/shooting - T vs zeta for diff epsilon.png  used
+ on input line 272.
+(pdftex.def)             Requested size: 223.07211pt x 131.03415pt.
+<images/shooting - n vs epsilon.png, id=189, 582.31552pt x 366.04755pt>
+File: images/shooting - n vs epsilon.png Graphic file (type png)
+<use images/shooting - n vs epsilon.png>
+Package pdftex.def Info: images/shooting - n vs epsilon.png  used on input line
+ 279.
+(pdftex.def)             Requested size: 223.07211pt x 140.22218pt.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 288.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 288.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 288.
+
+<images/shooting - n vs s0 - with negative.png, id=192, 572.92043pt x 366.04755
+pt>
+File: images/shooting - n vs s0 - with negative.png Graphic file (type png)
+<use images/shooting - n vs s0 - with negative.png>
+Package pdftex.def Info: images/shooting - n vs s0 - with negative.png  used on
+ input line 293.
+(pdftex.def)             Requested size: 223.07211pt x 142.52338pt.
+<images/shooting - n vs s0 - no negative.png, id=193, 581.41216pt x 366.04755pt
+>
+File: images/shooting - n vs s0 - no negative.png Graphic file (type png)
+<use images/shooting - n vs s0 - no negative.png>
+Package pdftex.def Info: images/shooting - n vs s0 - no negative.png  used on i
+nput line 300.
+(pdftex.def)             Requested size: 223.07211pt x 140.44pt.
+[4 <./images/shooting - T vs zeta for diff N.png (PNG copy)> <./images/shooting
+ - n vs N.png (PNG copy)> <./images/shooting - T vs zeta for diff epsilon.png (
+PNG copy)> <./images/shooting - n vs epsilon.png (PNG copy)>] [5 <./images/shoo
+ting - n vs s0 - with negative.png (PNG copy)> <./images/shooting - n vs s0 - n
+o negative.png (PNG copy)>]
+<images/FD - T vs zeta.png, id=207, 578.16pt x 366.04755pt>
+File: images/FD - T vs zeta.png Graphic file (type png)
+<use images/FD - T vs zeta.png>
+Package pdftex.def Info: images/FD - T vs zeta.png  used on input line 316.
+(pdftex.def)             Requested size: 223.07211pt x 141.22755pt.
+<images/shooting - T vs zeta.png, id=208, 577.79865pt x 366.04755pt>
+File: images/shooting - T vs zeta.png Graphic file (type png)
+<use images/shooting - T vs zeta.png>
+Package pdftex.def Info: images/shooting - T vs zeta.png  used on input line 32
+3.
+(pdftex.def)             Requested size: 223.07211pt x 141.31693pt.
+<images/FD - md vs zeta.png, id=210, 569.4876pt x 366.04755pt>
+File: images/FD - md vs zeta.png Graphic file (type png)
+<use images/FD - md vs zeta.png>
+Package pdftex.def Info: images/FD - md vs zeta.png  used on input line 335.
+(pdftex.def)             Requested size: 223.07211pt x 143.38353pt.
+<images/shooting - md vs zeta.png, id=211, 569.4876pt x 366.04755pt>
+File: images/shooting - md vs zeta.png Graphic file (type png)
+<use images/shooting - md vs zeta.png>
+Package pdftex.def Info: images/shooting - md vs zeta.png  used on input line 3
+42.
+(pdftex.def)             Requested size: 223.07211pt x 143.38353pt.
+<images/shooting - md vs zeta - no zero.png, id=212, 574.5465pt x 366.04755pt>
+File: images/shooting - md vs zeta - no zero.png Graphic file (type png)
+<use images/shooting - md vs zeta - no zero.png>
+Package pdftex.def Info: images/shooting - md vs zeta - no zero.png  used on in
+put line 348.
+(pdftex.def)             Requested size: 250.38564pt x 159.52542pt.
+ [6 <./images/FD - T vs zeta.png (PNG copy)> <./images/shooting - T vs zeta.png
+ (PNG copy)> <./images/FD - md vs zeta.png (PNG copy)> <./images/shooting - md 
+vs zeta.png (PNG copy)> <./images/shooting - md vs zeta - no zero.png (PNG copy
+)>] [7] 
 AED: lastpage setting LastPage
-[3] (./hw1.aux)
+[8] (./hw1.aux)
 Package rerunfilecheck Info: File `hw1.out' has not changed.
-(rerunfilecheck)             Checksum: 7591982EBF4297DB8BEE3A79225BEEB8;1534.
+(rerunfilecheck)             Checksum: 85A4C7E91D470BABD39364C98D237FBE;3291.
  ) 
 Here is how much of TeX's memory you used:
- 14726 strings out of 478287
- 239886 string characters out of 5849288
- 585289 words of memory out of 5000000
- 32650 multiletter control sequences out of 15000+600000
- 477405 words of font info for 59 fonts, out of 8000000 for 9000
+ 14932 strings out of 478287
+ 246075 string characters out of 5849288
+ 587005 words of memory out of 5000000
+ 32815 multiletter control sequences out of 15000+600000
+ 479805 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,15n,106p,317b,427s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 110i,14n,106p,543b,624s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -658,10 +800,10 @@ ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/fourier/fourier-orns.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sfrm1095.pfb>
-Output written on hw1.pdf (6 pages, 250107 bytes).
+Output written on hw1.pdf (11 pages, 3720125 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 319 PDF objects out of 1000 (max. 8388607)
+ 250 compressed objects within 3 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 

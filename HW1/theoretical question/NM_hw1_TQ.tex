@@ -114,16 +114,158 @@ Given the ODE:
 \end{equation}
 The analytical solution for the problem is:
 \begin{equation}
-    \begin{array}{rcr}
+    \begin{array}{rcl}
         \displaystyle\frac{dy}{y} & = & -dx \\\\
         \displaystyle\int\frac{dy}{y} & = & \int-dx \\\\
-        \displaystyle\ln\left(y\right) & = & -x \\\\
+        \displaystyle\ln\left(y\right) & = & -x+C \\\\
+        & \Downarrow & y_{\left(0\right)}=1 \\\\
+        C & = & 0 \\\\
+        & \Downarrow &
     \end{array}
 \end{equation}
 \begin{equation}
     \colorbox{yellow}{$y=\displaystyle e^{-\displaystyle x}$}
 \end{equation}
 
-\subsection{A - Forward differencing}
+\subsection{A - Forward Differencing}
+Given the differencing equation:
+\begin{equation}
+    \frac{y_{n+1}-y_n}{h}=-y_n\hspace{1cm}\emph{O}\left(h\right)
+\end{equation}
+and assuming the solution has the following form:
+\begin{equation}
+    y_n=\alpha\beta^n
+\end{equation}
+\begin{equation}
+    \begin{array}{rcl}
+        & \Downarrow & \\\\
+        \alpha\beta^{n+1}-\alpha\beta^n & = & -h\alpha\beta^n \\\\
+        \beta^{n+1} & = & \left(1-h\right)\beta^n \\\\
+        \beta & = & 1-h \\\\
+        & \Downarrow & \\\\
+        y_n & = & \alpha\left(1-h\right)^n \\\\
+        & \Downarrow & y_{\left(0\right)}=1 \\\\
+        \alpha & = & 1 \\\\
+        & \Downarrow & \\\\
+        y_n & = & \left(1-h\right)^n
+    \end{array}
+\end{equation}
+For stability we will demand $y_n$ to approach zero, so:
+\begin{equation}
+    \begin{array}{rcl}
+        0<&1-h&<1 \\\\
+        &\colorbox{yellow}{$0<h<1$}&
+    \end{array}
+\end{equation}
+
+\subsection{B - Backward Differencing}
+Given the differencing equation:
+\begin{equation}
+    \frac{y_{n}-y_{n-1}}{h}=-y_n\hspace{1cm}\emph{O}\left(h\right)
+\end{equation}
+and assuming the solution has the following form:
+\begin{equation}
+    y_n=\alpha\beta^n
+\end{equation}
+\begin{equation}
+    \begin{array}{rcl}
+        \Downarrow \\\\
+        \alpha\beta^n - \alpha\beta^{n-1} & = & -h\alpha\beta^n \\\\
+        \beta^{n-1} & = & \left(1+h\right)\beta^n \\\\
+        \beta & = & \displaystyle\frac{1}{1+h} \\\\
+        & \Downarrow & \\\\
+        y_n & = & \alpha\left(\displaystyle\frac{1}{1+h}\right)^n \\\\
+        & \Downarrow & y_{\left(0\right)}=1 \\\\
+        \alpha & = & 1 \\\\
+        & \Downarrow & \\\\
+        y_n & = & \left(\displaystyle\frac{1}{1+h}\right)^n
+    \end{array}
+\end{equation}
+For stability we will demand $y_n$ to approach zero, so:
+\begin{equation}
+    \begin{array}{rcl}
+        0<&\displaystyle\frac{1}{1+h}&<1 \\\\
+        1&<&h+1 \\\\
+        &\colorbox{yellow}{$0<h$}&
+    \end{array}
+\end{equation}
+
+\subsection{C - Forward Differencing With Averaging}
+Given the differencing equation:
+\begin{equation}
+    \frac{y_{n+1}-y_{n}}{h}=-\frac{1}{2}\left(y_{n+1}+y_n\right)\hspace{1cm}\emph{O}\left(h^2\right)
+\end{equation}
+and assuming the solution has the following form:
+\begin{equation}
+    y_n=\alpha\beta^n
+\end{equation}
+\begin{equation*}
+    \Downarrow
+\end{equation*}
+\begin{equation}
+    \begin{array}{rcl}
+        \displaystyle\frac{\alpha\beta^{n+1}-\alpha\beta^{n}}{h} & = & \displaystyle-\frac{1}{2}\left(\alpha\beta^{n+1}+\alpha\beta^n\right) \\\\
+        \displaystyle\left(1+\frac{h}{2}\right)\beta^{n+1} & = & \displaystyle\left(1-\frac{h}{2}\right)\beta^n \\\\
+        \beta & = & \displaystyle\frac{\displaystyle1-\frac{h}{2}}{\displaystyle1+\frac{h}{2}} \\\\
+        \beta & = & \displaystyle\frac{2-h}{2+h} \\\\
+        & \Downarrow & \\\\
+        y_n & = & \alpha\left(\displaystyle\frac{2-h}{2+h}\right)^n \\\\
+        & \Downarrow & y_{\left(0\right)}=1 \\\\
+        \alpha & = & 1 \\\\
+        & \Downarrow & \\\\
+        y_n & = & \left(\displaystyle\frac{2-h}{2+h}\right)^n
+    \end{array}
+\end{equation}
+For stability we will demand $y_n$ to approach zero, so:
+\begin{equation}
+    \begin{array}{rcl}
+        0<&\displaystyle\frac{2-h}{2+h}&<1 \\\\
+        0<&2-h&<2+h \\\\
+        0<&h&<2 \\\\
+        &\colorbox{yellow}{$0<h<2$}&
+    \end{array}
+\end{equation}
+
+\subsection{D - Central Differencing}
+Given the differencing equation:
+\begin{equation}
+    \frac{y_{n+1}-y_{n-1}}{2h}=-y_n\hspace{1cm}\emph{O}\left(h^2\right)
+\end{equation}
+and assuming the solution has the following form:
+\begin{equation}
+    y_n=\alpha\beta^n
+\end{equation}
+\begin{equation*}
+    \Downarrow
+\end{equation*}
+\begin{equation}
+    \begin{array}{rcl}
+        \displaystyle\frac{\alpha\beta^{n+1}-\alpha\beta^{n-1}}{2h} & = & -\alpha\beta^n \\\\
+        \beta^{n+1}+2h\beta^n-\beta^{n-1} & = & 0 \\\\
+        \beta^2+2h\beta-1 & = & 0 \\\\
+        \beta & = & \displaystyle-h\pm\sqrt{h^2+1} \\\\
+        & \Downarrow & \text{h must be positive} \\\\
+        \beta & = & \displaystyle-h+\sqrt{h^2+1} \\\\
+        & \Downarrow & \\\\
+        y_n & = & \alpha\left(\displaystyle-h+\sqrt{h^2+1}\right)^n \\\\
+        & \Downarrow & y_{\left(0\right)}=1 \\\\
+        \alpha & = & 1 \\\\
+        & \Downarrow & \\\\
+        y_n & = & \left(\displaystyle-h+\sqrt{h^2+1}\right)^n
+    \end{array}
+\end{equation}
+For stability we will demand $y_n$ to approach zero, so:
+\begin{equation}
+    \begin{array}{rcl}
+        0<&\displaystyle-h+\sqrt{h^2+1}&<1 \\\\
+        h<&\displaystyle\sqrt{h^2+1}&<1+h \\\\
+        h^2<&h^2+1&<1+2h+h^2 \\\\
+        0&<&2h \\\\
+        &\colorbox{yellow}{$0<h$}&
+    \end{array}
+\end{equation}
+
+\subsection{Choosing The Best Method}
+I will choose the \emph{Central Differencing Method} since it is the only unconditional stable method with second order local error.
 
 \end{document}

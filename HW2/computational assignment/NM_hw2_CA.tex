@@ -65,7 +65,7 @@
 \pagenumbering{roman}
 % \setcounter{page}{1}
 \begin{abstract}
-    hii
+    Heated tubing has many applications, from water cooling in computers to transporting liquid gas. Research has been conducted to investigate the stress-strain relationships and the material properties of a tube subjected to heating and cooling. A discussion about the optimal parameters was held, and the chosen parameters were used in the results. The results show that the temperature distribution does not depend on the numerical parameter R. The error of the temperature distribution between two convergence criteria decreases exponentially with the decrease of $\varepsilon$.
 \end{abstract}
 
 \tableofcontents
@@ -143,7 +143,7 @@ By using central differencing for the spatial derivatives and forward differenci
         \item $R=\displaystyle\frac{\Delta t}{\Delta r^2}$
         \item $T_{\left(i=0,j\right)}=j\cdot\Delta t$
         \item $T_{\left(i=N+1,j\right)}=100+40\cdot j\cdot\Delta t$
-        \item $T_{\left(i,j=0\right)}=200\left(r-\displaystyle\frac{1}{2}\right),\quad 0\le r\le N+1$
+        \item $T_{\left(i,j=0\right)}=200\left(r-\displaystyle\frac{1}{2}\right),\ 0\le r\le N+1$
         \nomenclature{$N$}{number of cell}
         \nomenclature{$J$}{final time coordinate}
     \end{itemize}
@@ -235,10 +235,11 @@ From Fig.\ref{fig: Influence of epsilon} we can conclude that for a convergence 
     \caption{FD - Influence of the convergence criteria R}
     \label{fig: Influence of R}
 \end{figure}
-From Fig.\ref{fig: Influence of R} we can conclude that the value of the numerical parameter R has close to no effect on the error of the solution.
+From Fig.\ref{fig: Influence of R} we can conclude that the value of the numerical parameter R has close to no effect on the error of the solution. Therefor the chosen \emph{R} is 0.45.
 
 \newpage
 \section{Results and Discussion}
+\label{sec: results and discussion}
 \subsection{Temperature Distribution}
 Using the parameters chosen above, the temperature distribution is therefor:
 \begin{figure}[H]
@@ -270,6 +271,12 @@ However, when using and $N=40$ $N=60$, the strain is:
 We observed that while $N = 20$ is adequate for convergence of the temperature, a higher number of elements is necessary to accurately calculate the strain. This is due to the order of the integration being $\emph{O}\left(h\right)$. 
 
 \section{Summary and Conclusion}
+In this assignment, a comprehensive analysis of the numerical parameters needed to solve the one-dimensional heat equation was conducted. The chosen parameters were used in the results section (Sec.\ref{sec: results and discussion}). The following conclusions came to light:
+\begin{itemize}
+    \item 20 elements is a sufficient number of elements for convergence of the temperature distribution, however the strain value is not yet converged at such values.
+    \item The RMS of the error decreases exponentially with the decrease of the convergence criteria.
+    \item The numerical parameter \emph{R} has near to no effect on the convergence of the temperature distribution.
+\end{itemize}
 
 \newpage
 \appendix

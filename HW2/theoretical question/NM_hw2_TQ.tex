@@ -1,5 +1,4 @@
 \documentclass[11pt, a4paper]{article}
-
 \usepackage{amsmath, amssymb, titling}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black]{hyperref}
@@ -62,5 +61,37 @@
 \setcounter{page}{1}
 
 \section{Q2}
+\subsection{A}
+We are asked to prove:
+\begin{equation}
+    \delta^2=\Delta-\nabla
+\end{equation}
+Where:
+\begin{itemize}
+    \item $\delta f=f_{\left(x+\frac{h}{2}\right)}-f_{\left(x-\frac{h}{2}\right)}$
+    \item $\Delta f=f_{\left(x+h\right)}-f_{\left(x\right)}$
+    \item $\nabla f=f_{\left(x\right)}-f_{\left(x-h\right)}$
+\end{itemize}
+\begin{equation}
+    \begin{matrix}
+        \begin{array}{rcl}
+            \delta^2f & = & \delta\left(f_{\left(x+\frac{h}{2}\right)}-f_{\left(x-\frac{h}{2}\right)}\right) \\\\
+            & = & \delta f_{\left(x+\frac{h}{2}\right)}-\delta f_{\left(x-\frac{h}{2}\right)} \\\\
+            & = & f_{\left(x+h\right)}-f_{\left(x\right)}-f_{\left(x\right)}+f_{\left(x-h\right)} \\\\
+            & = & f_{\left(x+h\right)}-2f_{\left(x\right)}+f_{\left(x-h\right)}
+        \end{array} && \begin{array}{rcl}
+            \Delta f-\nabla f & = & f_{\left(x+h\right)}-f_{\left(x\right)}-f_{\left(x\right)}+f_{\left(x-h\right)} \\\\ 
+            & = & f_{\left(x+h\right)}-2f_{\left(x\right)}+f_{\left(x-h\right)} \\\\
+            \ \\\\
+            \ \\\\
+        \end{array} \\
+        & \Downarrow &
+    \end{matrix}
+\end{equation}
+\begin{equation*}
+    \delta^2=\Delta-\nabla\qquad\blacksquare
+\end{equation*}
+
+\subsection{B}
 
 \end{document}

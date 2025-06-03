@@ -93,5 +93,58 @@ Where:
 \end{equation*}
 
 \subsection{B}
+The next ODE is given:
+\begin{equation}
+    \parder{U}{t}=\parder{^2U}{x^2}
+\end{equation}
+The following finite differencing method is suggested::
+\begin{equation}
+    u_{i,j+1}=u_{i,j}+R\left(u_{i-1,j}-u_{i,j}-u_{i,j+1}+u_{i+1,j+1}\right)
+\end{equation}
+\begin{itemize}
+    \item $\displaystyle R=\frac{\Delta t}{h^2}$
+\end{itemize}
+in order to solve the method explicitly we will isolate $u_{i,j+1}$ in the LHS:
+\begin{equation}
+    \begin{array}{rcl}
+        \left(1+R\right)u_{i,j+1} & = & u_{i,j}+R\left(u_{i-1,j}-u_{i,j}+u_{i+1,j+1}\right) \\\\
+        \displaystyle u_{i,j+1} & = & \displaystyle \frac{1}{1+R}u_{i,j}+\frac{R}{1+R}\left(u_{i-1,j}-u_{i,j}+u_{i+1,j+1}\right)
+    \end{array}
+\end{equation}
+This step might look like not enough, however, if we solve in a Gauss-Sidle like method, from the end to the start, so at a specific \emph{i} we would already know $u_{i+1,j+1}$.
+
+\subsection{C}
+Let's use forward differencing for the time derivative:
+\begin{equation}
+    \parder{U}{t}=\frac{1}{\Delta t}\Delta_tu=\frac{1}{\Delta t}\left(u_{i,j+1}-u_{i,j}\right)
+\end{equation}
+and central differencing for the spacial derivative:
+\begin{equation}
+    \parder{^2U}{x^2}=\frac{1}{h^2}\delta_x^2u=\frac{1}{h^2}\left(\Delta_x-\nabla_x\right)u
+\end{equation}
+To achieve the desired scheme we will define the forward differencing at $j+1$ and the backward differencing at $j$:
+\begin{equation}
+    \parder{^2U}{x^2}=\frac{1}{h^2}\left(\left.\Delta_x\right|_{j+1}-\left.\nabla_x\right|_j\right)u
+\end{equation}
+substituting the derivative into the ODE, we get:
+\begin{equation}
+    \begin{array}{rcl}
+        \displaystyle \frac{1}{\Delta t}\left(u_{i,j+1}-u_{i,j}\right) & = & \displaystyle \frac{1}{h^2}\left(\left.\Delta_x\right|_{j+1}-\left.\nabla_x\right|_j\right)u \\\\
+        \displaystyle \left(u_{i,j+1}-u_{i,j}\right) & = & \displaystyle \frac{\Delta t}{h^2}\left(u_{i+1,j+1}-u_{i,j+1}-u_{i,j}+u_{i-1,j}\right) \\\\
+        \displaystyle u_{i,j+1} & = & \displaystyle u_{i,j}+R\left(u_{i+1,j+1}-u_{i,j+1}-u_{i,j}+u_{i-1,j}\right)\qquad\blacksquare
+    \end{array}
+\end{equation}
+
+\section{Q3}
+\subsection{A}
+The two dimensional heat equation is given by:
+\begin{equation}
+    \parder{u}{t}=\parder{^2u}{x^2}+\parder{^2u}{y^2}
+\end{equation}
+u is a function of \emph{x}, \emph{y}, \emph{t}, namely $u=u_{\left(x,y,t\right)}$. We will derive the equation of $u_{\left(x,y,t+\Delta t\right)}$ by expanding it into a Taylor series:
+\begin{equation}
+    u_{\left(x,y,t+\Delta t\right)}=
+\end{equation}
+
 
 \end{document}

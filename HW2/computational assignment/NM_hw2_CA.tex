@@ -169,7 +169,7 @@ In order determined if the iterative method for solving the system of equation h
 \subsection{Integral Calculation}
 The integral to calculate the strain \emph{I} will be calculated using trapezoid integration:
 \begin{equation}
-    I=\alpha\frac{h}{2}\sum_{i=0}^{N}{T_{\left(i+1\right)}+T_{\left(i\right)}}
+    I=\alpha\frac{h}{4}\sum_{i=0}^{N}{\left(T_{\left(i+1\right)}+T_{\left(i\right)}\right)\left(r_{\left(i+1\right)}+r_{\left(i\right)}\right)}
 \end{equation}
 
 \section{Influence of The Numerical Methods}
@@ -260,12 +260,12 @@ We can also plot the temperature distribution over time for all the radiuses:
 \subsection{Strain Calculation}
 When using the chosen parameters, the calculated strain is:
 \begin{equation}
-    I_{N=20}=1224.8
+    I_{N=20}=1242.8
 \end{equation}
-However, when using and $N=40$ $N=60$, the strain is:
+When using and $N=40$ $N=60$, the strain is:
 \begin{equation}
     \begin{matrix}
-        I_{N=40}=1234.0 && I_{N=60}=1237.0
+        I_{N=40}=1243.2 && I_{N=60}=1243.3
     \end{matrix}
 \end{equation}
 We observed that while $N = 20$ is adequate for convergence of the temperature, a higher number of elements is necessary to accurately calculate the strain. This is due to the order of the integration being $\emph{O}\left(h\right)$. 

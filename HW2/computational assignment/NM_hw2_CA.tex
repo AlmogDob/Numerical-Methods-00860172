@@ -159,6 +159,98 @@ The step size in time $\Delta t$ was chosen somewhat arbitrary, only to maintain
     \displaystyle T_{i,j+1}^{n+1}=T_{i,j}^n+4KR\left(T_{i-1,j}^n-2T_{i,j}^n+T_{i+1,j}^n+\frac{\Delta r}{2r}\left(T_{i+1,j}^n-T_{i-1,j}^n\right)\right)
 \end{equation}
 
+\subsection{Stability Analysis}
+We will use  von-Neumann Stability Analysis. Let's consider the error:
+\begin{equation}
+    e_{r,t}=T_{r,t}-\hat{T}_{r,t}
+\end{equation}
+\begin{itemize}
+    \item $T_{r,t}$ - The solution of the differencing equation.
+    \item $\hat{T}_{r,t}$ - The solution of the differencing equation with a small noise in the initial conditions.
+\end{itemize}
+\noindent Let's define:
+\begin{equation}
+    E_p=T_{p,0}-\hat{T}_{p,0}
+\end{equation}
+We can rewrite it as:
+\begin{equation}
+    E_p=\sum_{p=1}^{N}A_pe^{i\beta_n\Delta rp},\qquad i=\sqrt{-1},\qquad\beta_n=\frac{n\pi}{N+1}
+\end{equation}
+We want to check if there is a mode that diverges. Since the equation is linear we only need one mode to diverge to consider the hole scheme as diverged:
+\begin{equation}
+    E_p=A_pe^{i\beta_n\Delta rp}
+\end{equation}
+We need to check how the error behaves over time and to make sure it diminishes to $E_p$ when $t=0$.
+Let's assume the error is of the form of:
+\begin{equation}
+    E_{p,j}=A_pe^{i\beta\Delta rp}\cdot e^{\alpha t_j}
+\end{equation}
+We are considered stable when $\Re{\left\{\alpha\right\}}<0$. \\
+We can rewrite the error:
+\begin{equation}
+    E_{p,j}=A_pe^{i\beta\Delta rp}\cdot e^{\alpha\Delta tj}=A_pe^{i\beta\Delta rp}\cdot\xi^j
+\end{equation}
+Therefore the stability condition is $\left|\xi\right|\le1$
+Since the differencing equation is linear we can demand the error to satisfy the differencing equation:
+\begin{equation}
+    E_{p,j+1}=E_{p,j}+4KR\left(E_{p-1,j}-2E_{p,j}+E_{p+1,j}+\frac{\Delta r}{2r}\left(E_{p+1,j}-E_{p-1,j}\right)\right)
+\end{equation}
+After substituting the error we get:
+\scriptsize
+\begin{equation}
+    e^{i\beta\Delta rp}\xi^{j+1}=e^{i\beta\Delta rp}\xi^j+4KR\left(e^{i\beta\Delta r\left(p-1\right)}\xi^j-2e^{i\beta\Delta rp}\xi^j+e^{i\beta\Delta r\left(p+1\right)}\xi^j+\frac{\Delta r}{2r}\left(e^{i\beta\Delta r\left(p+1\right)}\xi^j-e^{i\beta\Delta r\left(p-1\right)}\xi^j\right)\right)
+\end{equation}
+\normalsize
+Dividing by $e^{i\beta\Delta rp}\xi^j$ we get:
+\begin{equation}
+    \begin{array}{rcl}
+        \xi & = & \displaystyle 1+4KR\left(e^{-i\beta\Delta r}-2+e^{i\beta\Delta r}+\frac{\Delta r}{2r}\left(e^{i\beta\Delta r}-e^{-i\beta\Delta r}\right)\right) \\\\
+        \xi & = & \displaystyle 1+4KR\left(2\cos{\left(\beta\Delta r\right)}-2+\frac{\Delta r}{2r}2i\sin{\left(\beta\Delta r\right)}\right) \\\\
+        \xi & = & \displaystyle 1+8KR\left(\cos{\left(\beta\Delta r\right)}-1+\frac{\Delta r}{2r}i\sin{\left(\beta\Delta r\right)}\right) \\\\
+        \xi & = & \displaystyle 1+8KR\left(\left(1-\frac{\Delta r}{2r}\right)\cos{\left(\beta\Delta r\right)}-1+\frac{\Delta r}{2r}e^{i\beta\Delta r}\right)
+    \end{array}
+\end{equation}
+The stability condition is $\left|\xi\right|\le1$ therefore:
+\begin{equation}
+    \begin{array}{c}
+        \displaystyle \left|1+8KR\left(\left(1-\frac{\Delta r}{2r}\right)\cos{\left(\beta\Delta r\right)}-1+\frac{\Delta r}{2r}e^{i\beta\Delta r}\right)\right|\le1 \\\\
+        \displaystyle \left|1+8KR\left(\left(1-\frac{\Delta r}{2r}\right)\cos{\left(\beta\Delta r\right)}-1+\frac{\Delta r}{2r}\right)\right|\le1 \\\\
+        \displaystyle \left|1+8KR\left(\left(1-\frac{\Delta r}{2r}\right)\cos{\left(\beta\Delta r\right)}-\left(1-\frac{\Delta r}{2r}\right)\right)\right|\le1 \\\\
+        \displaystyle \left|1+8KR\left(1-\frac{\Delta r}{2r}\right)\left(\cos{\left(\beta\Delta r\right)}-1\right)\right|\le1 \\\\
+        \displaystyle \left|1-8KR\left(1-\frac{\Delta r}{2r}\right)\sin^2{\left(\frac{\beta\Delta r}{2}\right)}\right|\le1
+    \end{array}
+\end{equation}
+The first inequality:
+\begin{equation}
+    \begin{array}{c}
+        \displaystyle -1\le1-8KR\left(1-\frac{\Delta r}{2r}\right)\sin^2{\left(\frac{\beta\Delta r}{2}\right)} \\\\
+        \displaystyle \frac{1}{4}\frac{1}{\displaystyle \left(1-\frac{\Delta r}{2r}\right)\sin^2{\left(\frac{\beta\Delta r}{2}\right)}}\ge KR \\\\
+        \displaystyle \frac{1}{4}\frac{1}{\displaystyle \left(1-\frac{\Delta r}{2r}\right)}\ge KR \\\\
+        \displaystyle \frac{1}{\displaystyle 4-\frac{2\Delta r}{r}}\ge KR \\\\
+        \displaystyle \frac{r}{\displaystyle 4r-2\Delta r}\ge KR 
+        % \\\\
+        % \displaystyle \frac{1}{2}\frac{r}{\displaystyle 2r-\Delta r}\ge KR
+    \end{array}
+\end{equation}
+The second inequality:
+\begin{equation}
+    \begin{array}{c}
+        \displaystyle 1-8KR\left(1-\frac{\Delta r}{2r}\right)\sin^2{\left(\frac{\beta\Delta r}{2}\right)}\le1 \\\\
+        \displaystyle -8KR\left(1-\frac{\Delta r}{2r}\right)\sin^2{\left(\frac{\beta\Delta r}{2}\right)}\le0 \\\\
+        \Downarrow \\
+        \text{Always true}
+    \end{array}
+\end{equation}
+We get that the stability criteria is therefore:
+\begin{equation}
+    R\le\frac{1}{2K}\frac{r}{2r-\Delta r}
+\end{equation}
+We essentially have a range of R where $\Delta r$ goes to 0 and $\infty$:
+\begin{equation}
+    0\le R\le\frac{1}{4K}
+\end{equation}
+For each $\Delta r$ and \emph{K} we have limit for \emph{R}.
+
 \subsection{Convergence Criteria}
 In order determined if the iterative method for solving the system of equation has converged, we will check if the temperature vector at a specific time has changed from step \emph{n} to step \emph{n+1} in the following way:
 \begin{equation}
@@ -255,6 +347,7 @@ We can also plot the temperature distribution over time for all the radiuses:
     \caption{Temperature as a Function of r over time}
     \label{fig: T vs r vs t}
 \end{figure}
+\noindent We can see The temperature increases monotonically according to the boundary conditions. The change in the rate of change can be explained by the fact the the mass of the cylinder does not change linearly with the increases of the radius. The temperature increases over time to match the boundary conditions.
 
 \newpage
 \subsection{Strain Calculation}

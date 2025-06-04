@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  4 JUN 2025 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  4 JUN 2025 21:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -701,7 +701,7 @@ Package: ragged2e 2021/12/15 v3.1 ragged2e Package
 \JustifyingParindent=\skip85
 )
 \c@lstlisting=\count323
-<./../../Cover page for computational assignments 2025.png, id=72, 553.31718pt 
+<./../../Cover page for computational assignments 2025.png, id=76, 553.31718pt 
 x 681.29532pt>
 File: ./../../Cover page for computational assignments 2025.png Graphic file (t
 ype png)
@@ -753,81 +753,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--156
 
  []
 
-<images/Influenc of N.png, id=152, 605.98395pt x 439.58228pt>
+[2] [3]
+<images/Influenc of N.png, id=186, 605.98395pt x 439.58228pt>
 File: images/Influenc of N.png Graphic file (type png)
 <use images/Influenc of N.png>
-Package pdftex.def Info: images/Influenc of N.png  used on input line 182.
+Package pdftex.def Info: images/Influenc of N.png  used on input line 274.
 (pdftex.def)             Requested size: 223.07211pt x 161.81787pt.
-<images/Influenc of N - error.png, id=153, 568.94557pt x 424.76692pt>
+<images/Influenc of N - error.png, id=187, 568.94557pt x 424.76692pt>
 File: images/Influenc of N - error.png Graphic file (type png)
 <use images/Influenc of N - error.png>
-Package pdftex.def Info: images/Influenc of N - error.png  used on input line 1
-89.
+Package pdftex.def Info: images/Influenc of N - error.png  used on input line 2
+81.
 (pdftex.def)             Requested size: 223.07211pt x 166.5399pt.
+ [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 198.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\varepsilon' on input line 198.
+(hyperref)                removing `math shift' on input line 290.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 198.
+(hyperref)                removing `\varepsilon' on input line 290.
 
-<images/Influenc of epsilon.png, id=155, 592.79468pt x 439.58228pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 290.
+
+<images/Influenc of epsilon.png, id=200, 592.79468pt x 439.58228pt>
 File: images/Influenc of epsilon.png Graphic file (type png)
 <use images/Influenc of epsilon.png>
-Package pdftex.def Info: images/Influenc of epsilon.png  used on input line 203
+Package pdftex.def Info: images/Influenc of epsilon.png  used on input line 295
 .
 (pdftex.def)             Requested size: 223.07211pt x 165.41978pt.
-<images/Influenc of epsilon - error.png, id=156, 575.81122pt x 427.8384pt>
+<images/Influenc of epsilon - error.png, id=201, 575.81122pt x 427.8384pt>
 File: images/Influenc of epsilon - error.png Graphic file (type png)
 <use images/Influenc of epsilon - error.png>
 Package pdftex.def Info: images/Influenc of epsilon - error.png  used on input 
-line 210.
+line 302.
 (pdftex.def)             Requested size: 223.07211pt x 165.74649pt.
-[2 <./images/Influenc of N.png (PNG copy)> <./images/Influenc of N - error.png 
-(PNG copy)>]
-<images/Influenc of R.png, id=169, 596.58885pt x 439.58228pt>
+<images/Influenc of R.png, id=203, 596.58885pt x 439.58228pt>
 File: images/Influenc of R.png Graphic file (type png)
 <use images/Influenc of R.png>
-Package pdftex.def Info: images/Influenc of R.png  used on input line 224.
+Package pdftex.def Info: images/Influenc of R.png  used on input line 316.
 (pdftex.def)             Requested size: 223.07211pt x 164.36671pt.
-<images/Influenc of R - error.png, id=170, 577.4373pt x 424.9476pt>
+<images/Influenc of R - error.png, id=204, 577.4373pt x 424.9476pt>
 File: images/Influenc of R - error.png Graphic file (type png)
 <use images/Influenc of R - error.png>
-Package pdftex.def Info: images/Influenc of R - error.png  used on input line 2
-31.
+Package pdftex.def Info: images/Influenc of R - error.png  used on input line 3
+23.
 (pdftex.def)             Requested size: 223.07211pt x 164.1662pt.
- [3 <./images/Influenc of epsilon.png (PNG copy)> <./images/Influenc of epsilon
- - error.png (PNG copy)> <./images/Influenc of R.png (PNG copy)> <./images/Infl
-uenc of R - error.png (PNG copy)>]
-<images/T over r.png, id=178, 567.50017pt x 439.76295pt>
+[5 <./images/Influenc of N.png (PNG copy)> <./images/Influenc of N - error.png 
+(PNG copy)> <./images/Influenc of epsilon.png (PNG copy)> <./images/Influenc of
+ epsilon - error.png (PNG copy)>] [6 <./images/Influenc of R.png (PNG copy)> <.
+/images/Influenc of R - error.png (PNG copy)>]
+<images/T over r.png, id=217, 567.50017pt x 439.76295pt>
 File: images/T over r.png Graphic file (type png)
 <use images/T over r.png>
-Package pdftex.def Info: images/T over r.png  used on input line 247.
+Package pdftex.def Info: images/T over r.png  used on input line 339.
 (pdftex.def)             Requested size: 318.66948pt x 246.95001pt.
-<images/T vs r vs t.png, id=179, 589.7232pt x 406.69943pt>
+<images/T vs r vs t.png, id=218, 589.7232pt x 406.69943pt>
 File: images/T vs r vs t.png Graphic file (type png)
 <use images/T vs r vs t.png>
-Package pdftex.def Info: images/T vs r vs t.png  used on input line 254.
+Package pdftex.def Info: images/T vs r vs t.png  used on input line 346.
 (pdftex.def)             Requested size: 318.66948pt x 219.76956pt.
- [4 <./images/T over r.png (PNG copy)> <./images/T vs r vs t.png (PNG copy)>] [
-5]
+ [7 <./images/T over r.png (PNG copy)> <./images/T vs r vs t.png (PNG copy)>] [
+8]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 285.
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 28
-5.
+nput line 378.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 37
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 285.
+(Font)              scaled to size 9.30756pt on input line 378.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 285.
+(Font)              scaled to size 8.50006pt on input line 378.
  (./matlab/parameters.m
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
@@ -849,14 +850,14 @@ LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 15.
-[6]
+[9]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 58.
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 70.
- [7]
+ [10]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 84.
@@ -881,14 +882,14 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 118.
- [8]
+ [11]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 127.
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 141.
- [9]
+ [12]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 176.
@@ -907,7 +908,7 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 219.
- [10]
+ [13]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 229.
@@ -941,7 +942,7 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 265.
- [11]
+ [14]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 328.
@@ -951,48 +952,52 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 329.
- [12]
+ [15]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 341.
 ) 
 AED: lastpage setting LastPage
-[13] (./NM_hw2_CA.aux)
+[16] (./NM_hw2_CA.aux)
 Package rerunfilecheck Info: File `NM_hw2_CA.out' has not changed.
-(rerunfilecheck)             Checksum: 8D68B73B00EB723FDAE9A873CFAB62C0;2981.
+(rerunfilecheck)             Checksum: CC583144737C46E2A9465884A23CA0CB;3132.
  ) 
 Here is how much of TeX's memory you used:
- 17645 strings out of 478287
- 282129 string characters out of 5849288
- 1141564 words of memory out of 5000000
- 35115 multiletter control sequences out of 15000+600000
+ 17664 strings out of 478287
+ 282362 string characters out of 5849288
+ 1141574 words of memory out of 5000000
+ 35116 multiletter control sequences out of 15000+600000
  491378 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,12n,120p,670b,2248s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-
 super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/fourier/fourier-orns.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/bera/fvmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/bera/fvmr8a.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfrm2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsl1095.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on NM_hw2_CA.pdf (16 pages, 3845600 bytes).
+s/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmex
+tra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fouri
+er/fourier-orns.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmb
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+frm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sfsl1095.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sfti1095.pfb>
+Output written on NM_hw2_CA.pdf (19 pages, 3900841 bytes).
 PDF statistics:
- 781 PDF objects out of 1000 (max. 8388607)
- 701 compressed objects within 8 object streams
- 414 named destinations out of 1000 (max. 500000)
- 182 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 839 PDF objects out of 1000 (max. 8388607)
+ 748 compressed objects within 8 object streams
+ 432 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 

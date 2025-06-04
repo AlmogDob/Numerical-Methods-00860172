@@ -208,9 +208,9 @@ result = solver(r_min, r, K, h, delta_t, t_start, t_end, N, epsilon, max_iterati
 % integrate N=20
 sum_N20 = 0;
 for i = [0:result.N+1-1]+1
-    sum_N20 = sum_N20 + (result.Ts(end,i)+result.Ts(end,i+1))*result.r(i);
+    sum_N20 = sum_N20 + (result.Ts(end,i)+result.Ts(end,i+1))*(result.r(i)+result.r(i+1))/2;
 end
-sum_N20 = sum_N20 * 10.7 * 0.5 * result.h
+sum_N20 = sum_N20 * alpha * 0.5 * result.h
 
 % integrate N=40
 load("effect_of_N_to_60.mat")
@@ -218,9 +218,9 @@ result = results_vec{end-1};
 sum_N40 = 0;
 for i = [0:result.N+1-1]+1
 
-    sum_N40 = sum_N40 + (result.Ts(end,i)+result.Ts(end,i+1))*result.r(i);
+    sum_N40 = sum_N40 + (result.Ts(end,i)+result.Ts(end,i+1))*(result.r(i)+result.r(i+1))/2;
 end
-sum_N40 = sum_N40 * 10.7 * 0.5 * result.h
+sum_N40 = sum_N40 * alpha * 0.5 * result.h
 
 % integrate N=60
 load("effect_of_N_to_60.mat")
@@ -228,9 +228,9 @@ result = results_vec{end};
 sum_N60 = 0;
 for i = [0:result.N+1-1]+1
 
-    sum_N60 = sum_N60 + (result.Ts(end,i)+result.Ts(end,i+1))*result.r(i);
+    sum_N60 = sum_N60 + (result.Ts(end,i)+result.Ts(end,i+1))*(result.r(i)+result.r(i+1))/2;
 end
-sum_N60 = sum_N60 * 10.7 * 0.5 * result.h
+sum_N60 = sum_N60 * alpha * 0.5 * result.h
 
 
 

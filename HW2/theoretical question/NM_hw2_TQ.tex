@@ -143,8 +143,28 @@ The two dimensional heat equation is given by:
 \end{equation}
 u is a function of \emph{x}, \emph{y}, \emph{t}, namely $u=u_{\left(x,y,t\right)}$. We will derive the equation of $u_{\left(x,y,t+\Delta t\right)}$ by expanding it into a Taylor series:
 \begin{equation}
-    u_{\left(x,y,t+\Delta t\right)}=
+    \begin{array}{rcl}
+        \displaystyle u_{\left(x,y,t+\Delta t\right)} & = & \displaystyle u_{\left(x,y,t\right)}+\Delta t\parder{u_{\left(x,y,t\right)}}{t}+\frac{\left(\Delta t\right)^2}{2!}\parder{^2u_{\left(x,y,t\right)}}{t^2} +\frac{\left(\Delta t\right)^3}{3!}\parder{^3u_{\left(x,y,t\right)}}{t^3}+\cdots \\\\
+        \displaystyle u_{\left(x,y,t+\Delta t\right)} & = & \displaystyle \left(1+\Delta t\parder{}{t}+\frac{\left(\Delta t\right)^2}{2!}\parder{^2}{t^2} +\frac{\left(\Delta t\right)^3}{3!}\parder{^3}{t^3}+\cdots\right)u_{\left(x,y,t\right)}
+    \end{array}
 \end{equation}
-
+From the PDE we get the following relation:
+\begin{equation}
+    \begin{matrix}
+        \displaystyle \parder{}{t}=\parder{^2}{x^2}+\parder{^2}{y^2}
+    \end{matrix}
+\end{equation}
+So, the Taylor expansion can be rewritten as:
+\begin{equation}
+    \displaystyle u_{\left(x,y,t+\Delta t\right)}=\displaystyle \left(1+\Delta t\left(\parder{^2}{x^2}+\parder{^2}{y^2}\right)+\frac{\left(\Delta t\right)^2}{2!}\left(\parder{^2}{x^2}+\parder{^2}{y^2}\right)^2 +\frac{\left(\Delta t\right)^3}{3!}\left(\parder{^2}{x^2}+\parder{^2}{y^2}\right)^3+\cdots\right)u_{\left(x,y,t\right)}
+\end{equation}
+We can identify the the Taylor series of an exponential:
+\begin{equation}
+    \displaystyle u_{\left(x,y,t+\Delta t\right)}=\exp{\left(\Delta t\left(\parder{^2}{x^2}+\parder{^2}{y^2}\right)\right)}
+\end{equation}
+The derivative can be substituted by using the following operators relation:
+\begin{equation}
+    \parder{}{x}=D_x=\frac{2}{h}\sinh^{-1}{\frac{\delta_x}{2}}
+\end{equation}
 
 \end{document}

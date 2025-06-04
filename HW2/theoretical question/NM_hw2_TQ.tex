@@ -160,11 +160,40 @@ So, the Taylor expansion can be rewritten as:
 \end{equation}
 We can identify the the Taylor series of an exponential:
 \begin{equation}
-    \displaystyle u_{\left(x,y,t+\Delta t\right)}=\exp{\left(\Delta t\left(\parder{^2}{x^2}+\parder{^2}{y^2}\right)\right)}
+    \displaystyle u_{\left(x,y,t+\Delta t\right)}=\exp{\left(\Delta t\left(\parder{^2}{x^2}+\parder{^2}{y^2}\right)\right)}u_{\left(x,y,t\right)}
+    \label{eq: converting to exponential}
 \end{equation}
 The derivative can be substituted by using the following operators relation:
 \begin{equation}
-    \parder{}{x}=D_x=\frac{2}{h}\sinh^{-1}{\frac{\delta_x}{2}}
+    \begin{matrix}
+        \displaystyle \parder{}{x}=D_x=\frac{2}{h}\sinh^{-1}{\left(\frac{\delta_x}{2}\right)} && \displaystyle \parder{}{y}=D_y=\frac{2}{h}\sinh^{-1}{\left(\frac{\delta_y}{2}\right)} \\\\
+        \displaystyle \parder{^2}{x^2}=D_x^2=\frac{4}{h^2}\left(\sinh^{-1}{\left(\frac{\delta_x}{2}\right)}\right)^2 && \displaystyle \parder{^2}{y^2}=D_y^2=\frac{4}{h^2}\left(\sinh^{-1}{\left(\frac{\delta_y}{2}\right)}\right)^2
+    \end{matrix}
+\end{equation}
+The following equation is reached:
+\begin{equation}
+    \displaystyle u_{\left(x,y,t+\Delta t\right)}=\exp{\left[\frac{4\Delta t}{h^2}\left(\left(\sinh^{-1}{\left(\frac{\delta_x}{2}\right)}\right)^2+\left(\sinh^{-1}{\left(\frac{\delta_y}{2}\right)}\right)^2\right)\right]}u_{\left(x,y,t\right)}
+\end{equation}
+To further simplify, we will expand the hyperbolic sin into it's Taylor series:
+\begin{equation}
+    \displaystyle u_{\left(x,y,t+\Delta t\right)}=\exp{\left[\frac{4\Delta t}{h^2}\left(\left(\frac{\delta_x}{2}-\frac{1}{3!}\left(\frac{\delta_x}{2}\right)^3+\cdots\right)^2+\left(\frac{\delta_y}{2}-\frac{1}{3!}\left(\frac{\delta_y}{2}\right)^3+\cdots\right)^2\right)\right]}u_{\left(x,y,t\right)}
+\end{equation}
+Now let's expand the exponent:
+\begin{equation}
+    \begin{array}{rcl}
+        \displaystyle u_{\left(x,y,t+\Delta t\right)} & = & \displaystyle \left[1+\frac{4\Delta t}{h^2}\left(\left(\frac{\delta_x}{2}-\frac{1}{3!}\left(\frac{\delta_x}{2}\right)^3+\cdots\right)^2+\left(\frac{\delta_y}{2}-\frac{1}{3!}\left(\frac{\delta_y}{2}\right)^3+\cdots\right)^2\right)\right. \\\\
+        && \displaystyle +\left.\frac{1}{2!}\frac{16\Delta t^2}{h^4}\left(\left(\frac{\delta_x}{2}-\frac{1}{3!}\left(\frac{\delta_x}{2}\right)^3+\cdots\right)^2+\left(\frac{\delta_y}{2}-\frac{1}{3!}\left(\frac{\delta_y}{2}\right)^3+\cdots\right)^2\right)^2\right]u_{\left(x,y,t\right)}\quad\blacksquare
+    \end{array}
+\end{equation}
+
+\subsection{B}
+From the this infinite Taylor series we can derive a lot of approximations. For example we could take only the elements up to the order of $\delta_x^2$ or $\delta_y^2$: 
+\begin{equation}
+    \begin{array}{rcl}
+        \displaystyle u_{\left(u,y,t+\Delta t\right)} & = & \displaystyle \left[1+\frac{4\Delta t}{h^2}\left(\frac{\delta_x^2}{4}+\frac{\delta_y^2}{4}\right)\right]u_{\left(x,y,t\right)} \\\\
+        \displaystyle u_{i,j,k+1} & = & \displaystyle \left[1+\frac{\Delta t}{h^2}\left(\delta_x^2+\delta^2_y\right)\right]u_{i,j,k} \\\\
+        \displaystyle u_{i,j,k+1} & = & a
+    \end{array}
 \end{equation}
 
 \end{document}

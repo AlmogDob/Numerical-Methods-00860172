@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  20 JUN 2025 22:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  24 JUN 2025 00:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -736,69 +736,315 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout7 = `NM_hw3_CA.lol'.
 
  [1] (./NM_hw3_CA.nls) [2]
-<images/The channel.png, id=114, 298.61563pt x 182.6825pt>
+<images/The channel.png, id=129, 298.61563pt x 182.6825pt>
 File: images/The channel.png Graphic file (type png)
 <use images/The channel.png>
 Package pdftex.def Info: images/The channel.png  used on input line 89.
 (pdftex.def)             Requested size: 318.66948pt x 194.96379pt.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 133.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\varepsilon' on input line 133.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 133.
-
 LaTeX Font Info:    Trying to load font information for U+futs on input line 14
-1.
+2.
+
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/ufuts.fd
 File: ufuts.fd 2004/03/02 Fontinst v1.926 font definitions for U/futs.
 )pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.141 \newpage
-               [1 <./images/The channel.png>] [2]
+l.142 \end{equation}
+                     [1 <./images/The channel.png>]
+Overfull \hbox (49.41295pt too wide) detected at line 155
+[][]\OML/cmm/m/it/10.95 ^^^[] \OT1/cmr/m/n/10.95 = [] [] + \OMS/cmsy/m/n/10.95 
+O [][]
+ []
+
+<images/ni nj - n.png, id=149, 578.34067pt x 432.35527pt>
+File: images/ni nj - n.png Graphic file (type png)
+<use images/ni nj - n.png>
+Package pdftex.def Info: images/ni nj - n.png  used on input line 177.
+(pdftex.def)             Requested size: 223.07211pt x 166.76405pt.
+<images/ni nj - max diff.png, id=150, 583.58025pt x 432.35527pt>
+File: images/ni nj - max diff.png Graphic file (type png)
+<use images/ni nj - max diff.png>
+Package pdftex.def Info: images/ni nj - max diff.png  used on input line 184.
+(pdftex.def)             Requested size: 223.07211pt x 165.2665pt.
+[2]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 192.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\varepsilon' on input line 192.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 192.
+
+<images/epsilon - n.png, id=161, 575.81122pt x 430.54852pt>
+File: images/epsilon - n.png Graphic file (type png)
+<use images/epsilon - n.png>
+Package pdftex.def Info: images/epsilon - n.png  used on input line 197.
+(pdftex.def)             Requested size: 223.07211pt x 166.7964pt.
+<images/epsilon - max diff.png, id=162, 587.5551pt x 430.54852pt>
+File: images/epsilon - max diff.png Graphic file (type png)
+<use images/epsilon - max diff.png>
+Package pdftex.def Info: images/epsilon - max diff.png  used on input line 204.
+
+(pdftex.def)             Requested size: 223.07211pt x 163.45903pt.
+<images/init val - n.png, id=164, 581.7735pt x 430.36784pt>
+File: images/init val - n.png Graphic file (type png)
+<use images/init val - n.png>
+Package pdftex.def Info: images/init val - n.png  used on input line 217.
+(pdftex.def)             Requested size: 223.07211pt x 165.01901pt.
+<images/init val - max diff.png, id=165, 587.5551pt x 430.36784pt>
+File: images/init val - max diff.png Graphic file (type png)
+<use images/init val - max diff.png>
+Package pdftex.def Info: images/init val - max diff.png  used on input line 224
+.
+(pdftex.def)             Requested size: 223.07211pt x 163.39043pt.
+[3 <./images/ni nj - n.png (PNG copy)> <./images/ni nj - max diff.png (PNG copy
+)> <./images/epsilon - n.png (PNG copy)> <./images/epsilon - max diff.png (PNG 
+copy)>]
+<images/phi ditribution.png, id=174, 458.37248pt x 430.90988pt>
+File: images/phi ditribution.png Graphic file (type png)
+<use images/phi ditribution.png>
+Package pdftex.def Info: images/phi ditribution.png  used on input line 237.
+(pdftex.def)             Requested size: 273.14923pt x 256.79893pt.
+ [4 <./images/init val - n.png (PNG copy)> <./images/init val - max diff.png (P
+NG copy)> <./images/phi ditribution.png (PNG copy)>] [5]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 249.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 24
+9.
+
+(/usr/share/texlive/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 9.30756pt on input line 249.
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.50006pt on input line 249.
+ (./matlab/parameters.m
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 6.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 9.
+) (./matlab/calc_extra_param.m
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 4.
+LaTeX Font Info:    Trying to load font information for TS1+fvm on input line 4
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/bera/ts1fvm.fd
+File: ts1fvm.fd 2004/09/07 scalable font definitions for TS1/fvm.
+)
+LaTeX Font Info:    Font shape `TS1/fvm/m/n' will be
+(Font)              scaled to size 8.50006pt on input line 4.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 6.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 7.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 20.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 23.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 26.
+) [6]
+(./matlab/NM_hw3_CA.m
+LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
+(Font)              scaled to size 8.50006pt on input line 27.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 48.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 51.
+ [7]
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 57.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 63.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 67.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 67.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 70.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 71.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 76.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 77.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 77.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 83.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 83.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 84.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 101.
+ [8]
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 104.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 110.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 116.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 120.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 120.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 123.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 124.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 129.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 130.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 130.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 136.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 153.
+ [9]
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 156.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 162.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 168.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 172.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 172.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 175.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 176.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 181.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 182.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 182.
+ [10]
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 232.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 248.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 249.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 250.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 250.
+ [11]
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 251.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 251.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 291.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 297.
+) [12]
 
 AED: lastpage setting LastPage
-[3] (./NM_hw3_CA.aux)
+(./NM_hw3_CA.aux)
 Package rerunfilecheck Info: File `NM_hw3_CA.out' has not changed.
-(rerunfilecheck)             Checksum: FC730F917B855838F4504B5B70484059;2795.
+(rerunfilecheck)             Checksum: 48148F316CCDB149CE18EBF173DF3357;2787.
  ) 
 Here is how much of TeX's memory you used:
- 16616 strings out of 478287
- 268467 string characters out of 5849288
- 606315 words of memory out of 5000000
- 34504 multiletter control sequences out of 15000+600000
- 483898 words of font info for 66 fonts, out of 8000000 for 9000
+ 17632 strings out of 478287
+ 282096 string characters out of 5849288
+ 1105130 words of memory out of 5000000
+ 35120 multiletter control sequences out of 15000+600000
+ 488475 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,11n,106p,312b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
-fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/fourier/fourier-orns.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sfsl1095.pfb>
-Output written on NM_hw3_CA.pdf (6 pages, 296924 bytes).
+ 110i,12n,120p,561b,2248s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
+fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-
+super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/fourier/fourier-orns.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+bera/fvmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmr8a.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf
+/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfrm2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsl1095.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on NM_hw3_CA.pdf (15 pages, 2886035 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 139 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 758 PDF objects out of 1000 (max. 8388607)
+ 677 compressed objects within 7 object streams
+ 397 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

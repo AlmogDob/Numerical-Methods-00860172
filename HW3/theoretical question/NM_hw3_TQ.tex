@@ -73,7 +73,7 @@ Where:
     \item $h=\Delta x$
     \item $k=\Delta y$
     \item $C=\displaystyle\frac{\alpha k}{h^2}$
-    \item $G=\displaystyle\frac{1}{2C}\left(1-e^{-2C}\right)=\displaystyle\frac{h^2}{2\alpha k}\left(1-e^{-2\frac{\alpha k}{h^2}}\right)$
+    \item $G=\displaystyle\frac{1}{2C}\left(1-e^{-2C}\right)=\displaystyle\frac{h^2}{2\alpha k}\left(1-e^{-2\frac{\alpha k}{h^2}}\right)\le1$
 \end{itemize}
 Hence the truncation error is of the order of $\mathcal{O}\left(\frac{k}{G},h^2\right)$. \\
 
@@ -107,8 +107,9 @@ We can rewrite the error:
 \begin{equation}
     E_{p,j}=A_pe^{i\beta h p}\cdot e^{\alpha\Delta tj}=A_pe^{i\beta h p}\cdot\xi^j
 \end{equation}
-Therefore the stability condition is $\left|\xi\right|\le1$
-Since the differencing equation is linear we can demand the error to satisfy the differencing equation:
+Therefore the stability condition is $\left|\xi\right|\le1$ \\
+
+\noindent Since the differencing equation is linear we can demand the error to satisfy the differencing equation:
 \begin{equation}
     E_{p,j+1}=\displaystyle E_{p,j}+\frac{\alpha kG}{h^2}\left(E_{p+1,j}-2E_{p,j}+E_{p-1,j}\right)
 \end{equation}
@@ -118,7 +119,119 @@ After substituting the error we get:
 \end{equation}
 Dividing by $e^{i\beta h p}\xi^j$ we get:
 \begin{equation}
-    \xi=\displaystyle 1+\frac{\alpha kG}{h^2}\left(e^{i\beta h }-2+e^{-i\beta h }\right)
+    \begin{array}{rcl}
+        \xi & = & \displaystyle 1+\frac{\alpha kG}{h^2}\left(e^{i\beta h }-2+e^{-i\beta h }\right) \\\\
+        \xi & = & \displaystyle 1+\frac{2\alpha kG}{h^2}\left(\cos\left(\beta h\right)-1\right) \\\\
+        \xi & = & \displaystyle 1-\frac{4\alpha kG}{h^2}\sin^2\left(\frac{\beta h}{2}\right)
+    \end{array}
+\end{equation}
+The stability condition is $\left|\xi\right|\le1$ therefore:
+\begin{equation}
+    \begin{array}{c}
+        \left|\displaystyle 1-\frac{4\alpha kG}{h^2}\sin^2\left(\frac{\beta h}{2}\right)\right|\le1 \\\\
+        -1\le\displaystyle 1-\frac{4\alpha kG}{h^2}\sin^2\left(\frac{\beta h}{2}\right)\le1
+    \end{array}
+\end{equation}
+The right inequality is always true. Let's check the left inequality:
+\begin{equation}
+    \begin{array}{c}
+        -1\le\displaystyle 1-\frac{4\alpha kG}{h^2}\sin^2\left(\frac{\beta h}{2}\right) \\\\
+        2\ge\displaystyle \frac{4\alpha kG}{h^2}\sin^2\left(\frac{\beta h}{2}\right) \\\\
+        \displaystyle \frac{1}{2\sin^2\left(\frac{\beta h}{2}\right)}\ge\displaystyle \frac{\alpha kG}{h^2} \\\\
+        \displaystyle\frac{\alpha kG}{h^2}\le\frac{1}{2}
+    \end{array}
+\end{equation}
+\subsection{A}
+The stability of the method is determined by:
+\begin{equation}
+    \displaystyle R=\frac{k}{h^2}\le\frac{1}{2\alpha G}
+\end{equation}
+Hence, the stability limitation of the normal differencing equation is: 
+\begin{equation}
+    \displaystyle R\le\frac{1}{2\alpha}
+\end{equation}
+and the stability limitation of the new differencing equation is:
+\begin{equation}
+    \displaystyle R\le\frac{1}{2\alpha G}\ge\frac{1}{2\alpha}
+\end{equation}
+So the new differencing equation has a larger range of stable R values. Which means we can use a larger time step and remain stable.
+\subsection{B}
+The truncation error is of the order of:
+\begin{equation}
+    \mathcal{O}\left(\frac{k}{G},h^2\right)
+\end{equation}
+Hence the truncation error of the normal differencing equation is:
+\begin{equation}
+    \mathcal{O}\left(k,h^2\right)
+\end{equation}
+and the truncation error of the new differencing equation is:
+\begin{equation}
+    \mathcal{O}\left(\frac{k}{G}\ge k,h^2\right)
+\end{equation}
+So the new differencing equation has a larger local precision in time than the normal differencing equation.
+
+\section{Q3}
+For the PDE
+\begin{equation}
+    \parder{U}{t}=\parder{^2U}{x^2}
+\end{equation}
+The following differencing equation is proposed:
+\begin{equation}
+    u_{i,j+1}=u_{i,j}+R\left(u_{i-1,j}-u_{i,j}-u_{i,j+1}+u_{i+1,j+1}\right)
+\end{equation}
+Using von-Neumann Stability Analysis we can write the error as:
+\begin{equation}
+    E_{p,j}=A_pe^{i\beta h p}\cdot e^{\alpha\Delta tj}=A_pe^{i\beta h p}\cdot\xi^j
+\end{equation}
+Where:
+\begin{itemize}
+    \item $i=\sqrt{-1}$
+    \item \emph{p} index in space
+\end{itemize}
+Therefore the stability condition is $\left|\xi\right|\le1$ \\
+
+\noindent Since the differencing equation is linear we can demand the error to satisfy the differencing equation:
+\begin{equation}
+    E_{p,j+1}=E_{p,j}+R\left(E_{p-1,j}-E_{p,j}-E_{p,j+1}+E_{p+1,j+1}\right)
+\end{equation}
+After substituting the error we get:
+\begin{equation}
+    e^{i\beta h p}\cdot\xi^{j+1}=e^{i\beta h p}\cdot\xi^j+R\left(e^{i\beta h \left(p-1\right)}\cdot\xi^j-e^{i\beta h p}\cdot\xi^j-e^{i\beta h p}\cdot\xi^{j+1}+e^{i\beta h \left(p+1\right)}\cdot\xi^{j+1}\right)
+\end{equation}
+Dividing by $e^{i\beta h p}\xi^j$ we get:
+\begin{equation}
+    \begin{array}{rcl}
+        \xi & = & 1+R\left(e^{-i\beta h}-1-\xi+e^{i\beta h }\cdot\xi\right) \\\\
+        \left(1+R-Re^{i\beta h}\right)\xi & = & 1+R\left(e^{-i\beta h}-1\right) \\\\
+        \left(1+R-Re^{i\beta h}\right)\xi & = & 1-R+Re^{-i\beta h} \\\\
+        \xi & = & \displaystyle \frac{1-R+Re^{-i\beta h}}{1+R-Re^{i\beta h}}
+    \end{array}
+\end{equation}
+The stability condition is $\left|\xi\right|\le1$ therefore:
+\begin{equation}
+    \begin{array}{c}
+        \left|\displaystyle \frac{1-R+Re^{-i\beta h}}{1+R-Re^{i\beta h}}\right|\le1 \\\\
+        \left|\displaystyle \frac{1-R+R\left(\cos\left(\beta h\right)-i\sin\left(\beta h\right)\right)}{1+R-R\left(\cos\left(\beta h\right)+i\sin\left(\beta h\right)\right)}\right|\le1 \\\\
+        \left|\displaystyle \frac{1-R+R\cos\left(\beta h\right)-iR\sin\left(\beta h\right)}{1+R-R\cos\left(\beta h\right)+iR\sin\left(\beta h\right)}\right|\le1 \\\\
+        \displaystyle\sqrt{\frac{\displaystyle\left(\frac{1}{R}-1+\cos\left(\beta h\right)\right)^2+\sin^2\left(\beta h\right)}{\displaystyle\left(\frac{1}{R}+1-\cos\left(\beta h\right)\right)^2+\sin^2\left(\beta h\right)}}\le1 \\\\
+        \displaystyle\frac{\displaystyle\left(\frac{1}{R}-1+\cos\left(\beta h\right)\right)^2+\sin^2\left(\beta h\right)}{\displaystyle\left(\frac{1}{R}+1-\cos\left(\beta h\right)\right)^2+\sin^2\left(\beta h\right)}\le1 \\\\
+        \displaystyle \left(\frac{1}{R}-1+\cos\left(\beta h\right)\right)^2+\sin^2\left(\beta h\right)\le\displaystyle \left(\frac{1}{R}+1-\cos\left(\beta h\right)\right)^2+\sin^2\left(\beta h\right) \\\\
+        \displaystyle \left(\frac{1}{R}-1+\cos\left(\beta h\right)\right)^2\le\displaystyle \left(\frac{1}{R}+1-\cos\left(\beta h\right)\right)^2 \\\\
+        \displaystyle \frac{1}{R}-1+\cos\left(\beta h\right)\le\frac{1}{R}+1-\cos\left(\beta h\right) \\\\
+        \displaystyle 2\cos\left(\beta h\right)\le2 \\\\
+        \displaystyle \cos\left(\beta h\right)\le1
+    \end{array}
+\end{equation}
+Since $\beta h\ge0$ the condition is always meat. So the scheme is unconditionally stable.
+
+\section{Q4}
+The following PDE
+\begin{equation}
+    \parder{U}{t}=\alpha\parder{^2U}{x^2}
+\end{equation}
+is solve using the Crank-Nicolson method:
+\begin{equation}
+    u_{i,j+1}=\frac{R}{2}\left(u_{i-1,j+1}-2u_{i,j+1}+u_{i+1,j+1}\right)+\underbrace{text}_{b_i}
 \end{equation}
 
 \end{document}

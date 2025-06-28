@@ -61,5 +61,64 @@
 \setcounter{page}{1}
 
 \section{Q2}
+The differencing equation is given by:
+\begin{equation}
+    \begin{array}{rcl}
+        \displaystyle \frac{u_{i,j+1}-u_{i,j}}{kG}+\mathcal{O}\left(\frac{k}{G}\right) & = & \displaystyle \alpha\frac{u_{i+1,j}-2u_{i,j}+u_{i-1,j}}{h^2}+\mathcal{O}\left(h^2\right) \\\\
+        u_{i,j+1}-u_{i,j} & = & \displaystyle \frac{\alpha kG}{h^2}\left(u_{i+1,j}-2u_{i,j}+u_{i-1,j}\right)+\mathcal{O}\left(\frac{k}{G},h^2\right)
+    \end{array}
+\end{equation}
+Where:
+\begin{itemize}
+    \item $h=\Delta x$
+    \item $k=\Delta y$
+    \item $C=\displaystyle\frac{\alpha k}{h^2}$
+    \item $G=\displaystyle\frac{1}{2C}\left(1-e^{-2C}\right)=\displaystyle\frac{h^2}{2\alpha k}\left(1-e^{-2\frac{\alpha k}{h^2}}\right)$
+\end{itemize}
+Hence the truncation error is of the order of $\mathcal{O}\left(\frac{k}{G},h^2\right)$. \\
+
+\noindent We will use von-Neumann Stability Analysis. Let's consider the error:
+\begin{equation}
+    e_{r,t}=T_{r,t}-\hat{T}_{r,t}
+\end{equation}
+\begin{itemize}
+    \item $T_{r,t}$ - The solution of the differencing equation.
+    \item $\hat{T}_{r,t}$ - The solution of the differencing equation with a small noise in the initial conditions.
+\end{itemize}
+\noindent Let's define:
+\begin{equation}
+    E_p=T_{p,0}-\hat{T}_{p,0}
+\end{equation}
+We can rewrite it as:
+\begin{equation}
+    E_p=\sum_{p=1}^{N}A_pe^{i\beta_n h p},\qquad i=\sqrt{-1},\qquad\beta_n=\frac{n\pi}{N+1}
+\end{equation}
+We want to check if there is a mode that diverges. Since the equation is linear we only need one mode to diverge to consider the hole scheme as diverged:
+\begin{equation}
+    E_p=A_pe^{i\beta_n h p}
+\end{equation}
+We need to check how the error behaves over time and to make sure it diminishes to $E_p$ when $t=0$.
+Let's assume the error is of the form of:
+\begin{equation}
+    E_{p,j}=A_pe^{i\beta h p}\cdot e^{\alpha t_j}
+\end{equation}
+We are considered stable when $\Re{\left\{\alpha\right\}}<0$. \\
+We can rewrite the error:
+\begin{equation}
+    E_{p,j}=A_pe^{i\beta h p}\cdot e^{\alpha\Delta tj}=A_pe^{i\beta h p}\cdot\xi^j
+\end{equation}
+Therefore the stability condition is $\left|\xi\right|\le1$
+Since the differencing equation is linear we can demand the error to satisfy the differencing equation:
+\begin{equation}
+    E_{p,j+1}=\displaystyle E_{p,j}+\frac{\alpha kG}{h^2}\left(E_{p+1,j}-2E_{p,j}+E_{p-1,j}\right)
+\end{equation}
+After substituting the error we get:
+\begin{equation}
+    e^{i\beta h p}\cdot\xi^{j+1}=\displaystyle e^{i\beta h p}\cdot\xi^j+\frac{\alpha kG}{h^2}\left(e^{i\beta h \left(p+1\right)}\cdot\xi^j-2e^{i\beta h \left(p\right)}\cdot\xi^j+e^{i\beta h \left(p-1\right)}\cdot\xi^j\right)
+\end{equation}
+Dividing by $e^{i\beta h p}\xi^j$ we get:
+\begin{equation}
+    \xi=\displaystyle 1+\frac{\alpha kG}{h^2}\left(e^{i\beta h }-2+e^{-i\beta h }\right)
+\end{equation}
 
 \end{document}

@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{multicol}
 \usepackage{float}
 \usepackage{cancel}
 \usepackage{fancyhdr, lastpage}
@@ -231,7 +232,95 @@ The following PDE
 \end{equation}
 is solve using the Crank-Nicolson method:
 \begin{equation}
-    u_{i,j+1}=\frac{R}{2}\left(u_{i-1,j+1}-2u_{i,j+1}+u_{i+1,j+1}\right)+\underbrace{text}_{b_i}
+    u_{i,j+1}=\frac{R}{2}\left(u_{i-1,j+1}-2u_{i,j+1}+u_{i+1,j+1}\right)+\underbrace{u_{i,j}+\frac{R}{2}\left(u_{i-1,j}-2u_{i,j}+u_{i+1,j}\right)}_{b_{i,j}}
+\end{equation}
+Where:
+\begin{itemize}
+    \item $\displaystyle R=\frac{\alpha k}{h^2}$
+\end{itemize}
+The boundary conditions are:
+\begin{table}[H]
+    \center
+    \begin{tabular}{c||c||c}
+        $\displaystyle\left.\parder{U}{x}\right|_{0,t}=0$ & $\displaystyle\left.\parder{U}{x}\right|_{1,t}=0$ & $\displaystyle U_{\left(0,x\right)}=U_{0\left(x\right)}$
+    \end{tabular}
+\end{table}
+In order to solve the system of equations, the following iterative scheme will be in use:
+\begin{equation}
+    u^{\left(n+1\right)}_{i,j+1}=\frac{R}{2}\left(u^{\left(n\right)}_{i-1,j+1}-2u^{\left(n\right)}_{i,j+1}+u^{\left(n\right)}_{i+1,j+1}\right)+b_{i,j}
+\end{equation}
+The system of equation can be rewritten as:
+\begin{equation}
+    \vec{u}_{j+1}^{\left(n+1\right)}=\underline{\underline{A}}\vec{u}_{j+1}^{\left(n\right)}+\vec{b}_j
+\end{equation}
+Where:
+\begin{equation}
+    \underline{\underline{A}}=\begin{pmatrix}
+        -R & \displaystyle\frac{R}{2} & 0 & \cdots & \cdots & \cdots & 0 \\
+        \displaystyle\frac{R}{2} & -R & \displaystyle\frac{R}{2} & 0 & \cdots & \cdots & 0 \\
+        0 & \ddots & \ddots & \ddots & 0 & \cdots & 0 \\
+        0 & 0 & \displaystyle\frac{R}{2} & -R & \displaystyle\frac{R}{2} & 0 & 0 \\
+        0 & \cdots & 0 & \ddots & \ddots & \ddots & 0 \\
+        0 & \cdots & \cdots & 0 & \displaystyle\frac{R}{2} & -R & \displaystyle\frac{R}{2} \\
+        0 & \cdots & \cdots & \cdots & 0 & \displaystyle\frac{R}{2} & -R
+    \end{pmatrix}
+\end{equation}
+Let's expand the scheme:
+\begin{equation}
+    \begin{array}{rcl}
+        \vec{u}_{j+1}^{\left(n+1\right)} & = & \underline{\underline{A}}\vec{u}_{j+1}^{\left(n\right)}+\vec{b}_j \\\\
+        & = & \underline{\underline{A}}\left(\underline{\underline{A}}\vec{u}_{j+1}^{\left(n-1\right)}+\vec{b}_j\right)+\vec{b}_j=\underline{\underline{A}}^2\vec{u}_{j+1}^{\left(n-1\right)}+\underline{\underline{A}}\vec{b}_j+\vec{b}_j \\\\
+        & = & \underline{\underline{A}}^3\vec{u}_{j+1}^{\left(n-2\right)}+\underline{\underline{A}}^2\vec{b}_j+\underline{\underline{A}}\vec{b}_j+\vec{b}_j \\\\
+        & \vdots & \\\\
+        & = & \underline{\underline{A}}^{n+1}\vec{u}_{j+1}^{\left(0\right)}+\underbrace{\underline{\underline{A}}^n\vec{b}_j+\cdots+\vec{b}_j}_{\vec{B}_j} \\\\
+        & = & \underline{\underline{A}}^{n+1}\vec{u}_{j+1}^{\left(0\right)}+\vec{B}_j
+    \end{array}
+\end{equation}
+Assuming there is 'numerical noise' in the initial conditions, then we get:
+\begin{equation}
+    {\vec{u^*}^{\left(n+1\right)}_{j+1}}=\underline{\underline{A}}^{n+1}\vec{u^*}_{j+1}^{\left(0\right)}+\vec{B}_j
+\end{equation}
+The error is defined as:
+\begin{equation}
+    \begin{array}{c}
+        \vec{e}_j=\vec{u}_j-\vec{u^*}_j \\\\
+        \Downarrow \\\\
+        \vec{e}_{j+1}=\vec{u}_{j+1}-\vec{u^*}_{j+1}=\cdots=\underline{\underline{A}}^{j+1}\vec{e}_0
+    \end{array}
+\end{equation}
+For stability, we will demand that the error won't grow with time. We will assume that $\underline{\underline{A}}$ has all different eigenvalues and eigenvectors. Hence, each error vector can be written as a linear combination of the eigenvectors:
+\begin{equation}
+    \vec{e}_j=\sum_{s=1}^{N}c_s\lambda_s^j\vec{v}_s
+\end{equation}
+For stability we will demand:
+\begin{equation}
+    \max_{1\le s\le N}{\left|\lambda_s\right|}\le1
+\end{equation}
+In our case, $\underline{\underline{A}}$ is a 'cab' matrix where:
+\begin{multicols}{3}
+    \begin{itemize}
+        \item $c=\displaystyle\frac{R}{2}$
+        \item $a=-R$
+        \item $b=\displaystyle\frac{R}{2}$
+    \end{itemize}
+\end{multicols}
+In case of a 'cab' matrix, the eigenvalues are given by:
+\begin{equation}
+    \begin{array}{c}
+        \displaystyle\lambda_s=a+2b\sqrt{\frac{c}{b}}\cos\left(\frac{s\pi}{N+1}\right)=-R+R\cos\left(\frac{s\pi}{N+1}\right) \\\\
+        \Downarrow \left|\lambda_s\right|\le1\\\\
+        \displaystyle-1\le R\left(\cos\left(\frac{s\pi}{N+1}\right)-1\right)\le1 \\\\
+        \displaystyle-1\le R\left(-2\sin^2\left(\frac{s\pi}{2N+2}\right)\right)\le1
+    \end{array}
+\end{equation}
+The right inequality is always true. Let's check the left inequality:
+\begin{equation}
+    \begin{array}{c}
+        \displaystyle -1\le -2R\sin^2\left(\frac{s\pi}{2N+2}\right) \\\\
+        \displaystyle \frac{1}{\displaystyle2\sin^2\left(\frac{s\pi}{2N+2}\right)}\ge R \\\\
+        \displaystyle R\le\frac{1}{2} \\\\
+        \boxed{\displaystyle P=\frac{1}{2}}
+    \end{array}
 \end{equation}
 
 \end{document}
